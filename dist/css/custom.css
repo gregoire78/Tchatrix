@@ -1,0 +1,4 @@
+/* Redimensionnement police en fonction du viewport*/
+h2{
+    font-size: 4vmax ;
+}
