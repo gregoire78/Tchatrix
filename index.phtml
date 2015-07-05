@@ -30,6 +30,12 @@ ini_set('date.timezone', 'Europe/Paris');
         });
     </script>
 
+    <!-- Font awesome http://fortawesome.github.io/Font-Awesome/get-started/ -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap social css -->
+    <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
+
     <!-- Greetin style -->
     <link href="dist/css/style_greetin.css" rel="stylesheet" type="text/css"/>
 
@@ -56,7 +62,7 @@ ini_set('date.timezone', 'Europe/Paris');
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
@@ -92,6 +98,19 @@ ini_set('date.timezone', 'Europe/Paris');
             <div class="fill" style="background-image:url('dist/img/444773.jpg');"></div>
             <div class="carousel-caption">
                 <h2>Bienvenue sur Tchatrix !!!</h2>
+                <?php
+                if(is_string($user)){
+                    echo '<p>
+                            <a class="btn btn-success">Inscrivez-vous</a>
+                            <a class="btn btn-social-icon btn-facebook" href="'.$user.'" data-toggle="tooltip" data-placement="right" title="" data-original-title="Connectez-vous avec Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a></p>';
+                }else{
+                    /*echo "SELECT * FROM users WHERE facebook_id = {$user->getId()} OR email = {$user->getEmail()}";
+                    var_dump($user->getName(),$user->getEmail(),$user->getLink());*/
+                    echo '<a href="logout.php">Disconnect</a>';
+                }
+                ?>
             </div>
         </div>
         <div class="item">
@@ -131,7 +150,7 @@ ini_set('date.timezone', 'Europe/Paris');
 
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">Copyright &copy; <a href="/">Tchatrix</a> <?= date("Y") ?>. Created by Grégoire Joncour</p>
+        <p class="text-muted">Copyright &copy; <a href="/">Tchatrix</a> <?= date("Y") ?>.</p>
     </div>
 </footer>
 
