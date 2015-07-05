@@ -6,13 +6,15 @@
             "email": "greg.joncour@outlook.com"
         }
     ],
-  "autoload":{
-    "psr-4":{
-      "App\\":"app/"
-    }
-  },
-    "require" :
+    "autoload":
+    {
+        "psr-4":
         {
-            "facebook/php-sdk-v4" : "4.0.*"
+            "App\\":"app/"
         }
+    },
+    "require" :
+    {
+        "facebook/php-sdk-v4" : "4.0.*"
+    }
 }
