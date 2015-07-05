@@ -32,7 +32,8 @@ body > .container {
 }
 
 .carousel-caption > h2{
-    font-size: 4vmax ;
+	font-size: 4vmax ;
+	color: white;
 }
 
 .item,
