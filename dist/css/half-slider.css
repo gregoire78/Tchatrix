@@ -36,3 +36,9 @@ body {
 footer {
     margin: 50px 0;
 }
+
+/*----------My custom---------*/
+/* Redimensionnement police en fonction du viewport*/
+h2{
+    font-size: 4vmax ;
+}
